@@ -38,9 +38,9 @@ class FollowSerializer(serializers.ModelSerializer):
         user = self.context['request'].user
         following = data['following']
         if user == following:
-            raise serializers.ValidationError("Подписаться на себя нельзя")
-        elif Follow.objects.filter(user=user, following=following).exists():
-            raise serializers.ValidationError("Подписка уже существует")
+            raise serializers.ValidationError('Подписаться на себя нельзя')
+        if Follow.objects.filter(user=user, following=following).exists():
+            raise serializers.ValidationError('Подписка уже существует')
         return data
 
     class Meta:
