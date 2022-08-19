@@ -1,6 +1,6 @@
 # API YaTube
 
-API для проекта социальной сети YaTube.
+API для проекта социальной сети YaTube. Реализован на bootcamp Yandex.Practicum.
 
 ## Особенности / Features
 
@@ -47,16 +47,21 @@ http://127.0.0.1:8000/redoc/
 ```
 
 ## Как запустить проект / Installation
+Клонировать репозиторий на свой компьютер
+```
+git clone git@github.com:gplakhotnikov/PROJECT_NAME.git
+```
 
-Cоздать и активировать виртуальное окружение, скачать PIP:
+Cоздать и активировать виртуальное окружение
 ```
 python3 -m venv env
 source env/bin/activate
-python3 -m pip install --upgrade pip
+
 ```
-Установить зависимости из файла requirements.txt:
+Установить зависимости из файла requirements.txt
 ```
 pip install -r requirements.txt
+python3 -m pip install --upgrade pip
 ```
 Выполнить миграции:
 ```
